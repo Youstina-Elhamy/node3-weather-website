@@ -13,8 +13,10 @@ const forecast = (lat , long , callback) => {
             } else {
                  callback(undefined , 
                      'The weather_description is ' + body.weather[0].description + 
-                   ' . The temperature is '+ body.main.temp +
-                   ' , And The pressure is : ' +body.main.pressure  + '.'
+                   ' . The temperature is : '+ body.main.temp +
+                   '   .  The pressure is : ' +body.main.pressure  +
+                   ' . The Minimum tempreture for the day is : ' +body.main.temp_min  +
+                   ' , And the Maximum tempreture for the day is : ' +body.main.temp_max + '.' 
                  )
             }
         })
